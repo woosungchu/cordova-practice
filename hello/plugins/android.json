@@ -9,7 +9,20 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-browsersync": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "com.dbaq.cordova.contactsPhoneNumbers": {
+            "PACKAGE_NAME": "com.example.hello"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.example.hello"
+        }
+    }
 }
