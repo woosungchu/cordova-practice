@@ -18,7 +18,7 @@ Built the following apk(s):
   C:/cordova-practice/hello/platforms/android/build/outputs/apk/android-debug.apk
 ```
 live-reload
-- if you use real device, you need to 'port forwarding'. use chrome(url: [chrome//inspect/#devices](chrome//inspect/#devices))
+- if you use real device, you need to 'port forwarding'. use chrome 'chrome//inspect/#devices'
 ```
 cordova prepare
 cordova run -- --live-reload
