@@ -9,6 +9,11 @@
   "author": "woosungchu",
   "license": "ISC",
   "devDependencies": {
+    "cheerio": "^0.22.0",
     "cordova": "^6.5.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "csp-parse": "0.0.2"
   }
 }
