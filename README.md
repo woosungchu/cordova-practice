@@ -17,6 +17,11 @@ Total time: 2 mins 37.15 secs
 Built the following apk(s):
   C:/cordova-practice/hello/platforms/android/build/outputs/apk/android-debug.apk
 ```
+live-reload
+- if you use real device, you need to 'port forwarding'. use chrome(url: <chrome//inspect/#devices>)
+```
+cordova run -- --live-reload
+```
 
 ##References
 - [Cordova Apache](https://cordova.apache.org/docs/en/latest/guide/cli/)
