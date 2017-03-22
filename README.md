@@ -1,6 +1,6 @@
-#Cordova Practice
+# Cordova Practice
 
-##Command
+## Command
 
 Create App and build
 ```
@@ -25,14 +25,14 @@ cordova run -- --live-reload
 
 ```
 
-##References
+## References
 - [Cordova Apache](https://cordova.apache.org/docs/en/latest/guide/cli/)
 
-##Requirements
+## Requirements
 - IOS SDK
 - [ANDROID SDK](https://developer.android.com/studio/index.html#downloads)
 - Node
 - Cordova
 
-##Trouble Shooting
+## Trouble Shooting
 - [Sdk gralde/wrapper is empty](http://stackoverflow.com/questions/42613882/error-could-not-find-gradle-wrapper-within-android-sdk-might-need-to-update-yo)
