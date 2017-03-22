@@ -10,19 +10,18 @@ cd hello
 cordova platform add android --save
 cordova platform ls
 cordova build android
-```
-log...
-```
+
 Total time: 2 mins 37.15 secs
 Built the following apk(s):
   C:/cordova-practice/hello/platforms/android/build/outputs/apk/android-debug.apk
 ```
+
 live-reload
 - if you use real device, you need to 'port forwarding'. use chrome 'chrome//inspect/#devices'
 ```
+npm install
 cordova prepare
 cordova run -- --live-reload
-
 ```
 
 ## References
