@@ -19,6 +19,10 @@
                         {
                             "xml": "<feature name=\"ContactsPhoneNumbers\"><param name=\"android-package\" value=\"com.dbaq.cordova.contactsPhoneNumbers.ContactsManager\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FCMPlugin\"><param name=\"android-package\" value=\"com.gae.scaffolder.plugin.FCMPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -38,6 +42,20 @@
                     "application": [
                         {
                             "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"android.support.v4.content.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/provider_paths\" /></provider>",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:exported=\"true\" android:launchMode=\"singleTop\" android:name=\"com.gae.scaffolder.plugin.FCMPluginActivity\"><intent-filter><action android:name=\"FCM_PLUGIN_ACTIVITY\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.gae.scaffolder.plugin.MyFirebaseMessagingService\"><intent-filter><action android:name=\"com.google.firebase.MESSAGING_EVENT\" /></intent-filter></service>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.gae.scaffolder.plugin.MyFirebaseInstanceIDService\"><intent-filter><action android:name=\"com.google.firebase.INSTANCE_ID_EVENT\" /></intent-filter></service>",
                             "count": 1
                         }
                     ]
@@ -60,6 +78,9 @@
         },
         "com.dbaq.cordova.contactsPhoneNumbers": {
             "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-fcm": {
+            "PACKAGE_NAME": "com.example.cordova.practice"
         }
     },
     "dependent_plugins": {},
@@ -103,6 +124,14 @@
             "clobbers": [
                 "navigator.contactsPhoneNumbers"
             ]
+        },
+        {
+            "id": "cordova-plugin-fcm.FCMPlugin",
+            "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+            "pluginId": "cordova-plugin-fcm",
+            "clobbers": [
+                "FCMPlugin"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -110,6 +139,7 @@
         "cordova-plugin-compat": "1.1.0",
         "cordova-plugin-camera": "2.4.0",
         "cordova-plugin-browsersync": "0.1.1",
-        "com.dbaq.cordova.contactsPhoneNumbers": "0.0.8"
+        "com.dbaq.cordova.contactsPhoneNumbers": "0.0.8",
+        "cordova-plugin-fcm": "2.1.1"
     }
 }

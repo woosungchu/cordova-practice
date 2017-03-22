@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1081866036433",
+    "firebase_url": "https://cordova-practice.firebaseio.com",
+    "project_id": "cordova-practice",
+    "storage_bucket": "cordova-practice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081866036433:android:00d4af8d23a63f8e",
+        "android_client_info": {
+          "package_name": "com.example.cordova.practice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081866036433-1sf91nv4nfg572knf6jc6ufbdnekc4n9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKySIuqGueOoHEs1fFx_LstQ_aTQenCmU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

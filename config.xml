@@ -27,4 +27,5 @@
     <plugin name="cordova-plugin-camera" spec="~2.4.0" />
     <plugin name="cordova-plugin-browsersync" spec="~0.1.1" />
     <plugin name="com.dbaq.cordova.contactsPhoneNumbers" spec="~0.0.8" />
+    <plugin name="cordova-plugin-fcm" spec="~2.1.1" />
 </widget>
