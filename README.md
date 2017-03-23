@@ -26,6 +26,8 @@ cordova run -- --live-reload
 
 ## References
 - [Cordova Apache](https://cordova.apache.org/docs/en/latest/guide/cli/)
+- [Firebase Console](https://console.firebase.google.com/)
+- [cordova-plugin-fcm](https://github.com/fechanique/cordova-plugin-fcm)
 
 ## Requirements
 - IOS SDK
@@ -35,3 +37,4 @@ cordova run -- --live-reload
 
 ## Trouble Shooting
 - [Sdk gralde/wrapper is empty](http://stackoverflow.com/questions/42613882/error-could-not-find-gradle-wrapper-within-android-sdk-might-need-to-update-yo)
+- [getToken is not working](https://github.com/fechanique/cordova-plugin-fcm/issues/239)
