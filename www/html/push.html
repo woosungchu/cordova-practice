@@ -7,11 +7,13 @@
     document.addEventListener("deviceready", onDeviceReady, false);
 
     function onDeviceReady() {
-      alert(FCMPlugin)
       FCMPlugin.getToken(
         function(token){
+          var node = document.createElement("LI");
+          var textnode = document.createTextNode(token);
+          node.appendChild(textnode);
+          document.getElementById('tokens').appendChild(node);
           console.log("token :"+ token)
-          alert("token : "+ token);
         },
         function(err){
           console.log('error retrieving token: ' + err);
@@ -27,7 +29,6 @@
           }
         },
         function(msg){
-          alert('onNotification callback successfully registered: ' + msg)
           console.log('onNotification callback successfully registered: ' + msg);
         },
         function(err){
@@ -40,9 +41,6 @@
 </head>
 
 <div id="home">
-    <div id="app-status-div">
-        <ul id="app-status-ul">
-            <li>Cordova PushNotification Plugin Demo</li>
-        </ul>
-    </div>
+    <h2>Cordova PushNotification Plugin Demo</h2>
+    <ul id="tokens"></ul>
 </div>
