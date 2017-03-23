@@ -4,42 +4,38 @@
     <title>Notification Example</title>
     <script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
-        document.addEventListener("deviceready", onDeviceReady, false);
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-        function onDeviceReady() {
-            console.log("device is ready");
-            initFCM();
-            getToken();
+    function onDeviceReady() {
+      alert(FCMPlugin)
+      FCMPlugin.getToken(
+        function(token){
+          console.log("token :"+ token)
+          alert("token : "+ token);
+        },
+        function(err){
+          console.log('error retrieving token: ' + err);
         }
+      )
 
-        function initFCM() {
-        	 FCMPlugin.onTokenRefresh(function(token){
-        	 	pushtoken = token;
-        	 	console.log('onTokenRefresh:'+ token);
-        	 }, function(err){
-        	 	console.log('error retrieving token: ' + err);
-        	 });
-        	 FCMPlugin.onNotification(function(data){
-        	 	if(data.wasTapped){
-        	 		console.log(JSON.stringify(data));
-        	 	}else{
-        	 		console.log(JSON.stringify(data));
-        	 	}
-        	 }, function(msg){
-        	 	console.log('onNotification callback successfully registered: ' + msg);
-        	 }, function(err){
-        	 	console.log('Error registering onNotification callback: ' + err);
-        	 });
+      FCMPlugin.onNotification(
+        function(data){
+          if(data.wasTapped){
+            alert( JSON.stringify(data) );
+          }else{
+            alert( JSON.stringify(data) );
+          }
+        },
+        function(msg){
+          alert('onNotification callback successfully registered: ' + msg)
+          console.log('onNotification callback successfully registered: ' + msg);
+        },
+        function(err){
+          console.log('Error registering onNotification callback: ' + err);
         }
-        function getToken() {
-        	 FCMPlugin.getToken(function(token){
-        	 	pushtoken = token;
-        	 	console.log('getToken:', token);
-        	 	if (!token) setTimeout(getToken, 1000);
-        	 }, function(err){
-        	 	console.log('error retrieving token: ' + err);
-        	 });
-        }
+      );
+    }
+
     </script>
 </head>
 
