@@ -3,7 +3,7 @@
   <head>
     <title>Capture Photo</title>
 
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
 
     var pictureSource;   // picture source
@@ -91,25 +91,6 @@
       alert('Failed because: ' + message);
     }
 
-    // Contact
-    function onGetContact(){
-      navigator.contactsPhoneNumbers.list(function(contacts) {
-         console.log(contacts.length + ' contacts found');
-         for(var i = 0; i < contacts.length; i++) {
-            console.log(contacts[i].id + " - " + contacts[i].displayName);
-            for(var j = 0; j < contacts[i].phoneNumbers.length; j++) {
-               var phone = contacts[i].phoneNumbers[j];
-               console.log("===> " + phone.type + "  " + phone.number + " (" + phone.normalizedNumber+ ")");
-               var contact =  document.getElementById('contact');
-               contact.appendText =  phone;
-            }
-         }
-      }, function(error) {
-         console.error(error);
-      });
-    }
-
-
     </script>
   </head>
   <body>
@@ -117,7 +98,6 @@
     <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
     <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
     <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
-    <button onclick="onGetContact();">pictureSource.SAVEDPHOTOALBUM</button><br>
 
     <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
     <img style="display:none;" id="largeImage" src="" />

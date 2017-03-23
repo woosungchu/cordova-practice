@@ -5,7 +5,6 @@
     <script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
     document.addEventListener("deviceready", onDeviceReady, false);
-
     function onDeviceReady() {
       FCMPlugin.getToken(
         function(token){
@@ -19,7 +18,13 @@
           console.log('error retrieving token: ' + err);
         }
       )
-
+      FCMPlugin.onTokenRefresh(function(token){
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode(token);
+        node.appendChild(textnode);
+        document.getElementById('tokens').appendChild(node);
+        console.log("token :"+ token)
+      });
       FCMPlugin.onNotification(
         function(data){
           if(data.wasTapped){
@@ -35,8 +40,10 @@
           console.log('Error registering onNotification callback: ' + err);
         }
       );
-    }
 
+
+
+    }
     </script>
 </head>
 
